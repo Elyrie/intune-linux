@@ -19,7 +19,7 @@ Fedora stopped supporting legacy openjdk versions in favour of Adoptium Temurin 
   ```ini
   [Adoptium]
   name=Adoptium
-  baseurl=https://packages.adoptium.net/artifactory/fedora/\$releasever/\$basearch
+  baseurl=https://packages.adoptium.net/artifactory/rpm/fedora/\$releasever/\$basearch
   enabled=1
   gpgcheck=1
   gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
