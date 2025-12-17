@@ -1,0 +1,32 @@
+{
+  "Rules": [
+    {
+      "SettingName": "health",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux?view=o365-worldwide",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Microsoft Defender for Endpoint not healthy",
+          "Description": "Please ensure that MDE is running and is onboarded to Microsoft Security"
+        }
+      ]
+    },
+    {
+      "SettingName": "real_time_protection_enabled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux?view=o365-worldwide",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Microsoft Defender for Endpoint real time protection not enabled",
+          "Description": "Please ensure that MDE real time protection is enabled"
+        }
+      ]
+    }
+  ]
+}
