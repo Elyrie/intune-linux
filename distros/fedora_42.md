@@ -14,6 +14,17 @@ sudo dnf5 config-manager add-repo --from-repofile=https://packages.microsoft.com
 Fedora stopped supporting legacy openjdk versions in favour of Adoptium Temurin JDK packages [https://fedoraproject.org/wiki/Changes/ThirdPartyLegacyJdks](https://fedoraproject.org/wiki/Changes/ThirdPartyLegacyJdks) with their 42 release so Intune won't work without a few changes as it depends on java-11-openjdk by default.
 
 - adoptium-temurin-java-repository is already installed, but disabled in Fedora 42, so enable it with `sudoedit /etc/yum.repos.d/adoptium-temurin-java-repository.repo` and changing `enabled=1` on line 4
+- If the repository is not installed, use `sudoedit /etc/yum.repos.d/adoptium.repo` and add following content:
+
+  ```ini
+  [Adoptium]
+  name=Adoptium
+  baseurl=https://packages.adoptium.net/artifactory/fedora/\$releasever/\$basearch
+  enabled=1
+  gpgcheck=1
+  gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
+  ```
+
 - Install the JDK with `sudo dnf install temurin-11-jdk`
 - Create a symlink as a root with `sudo ln -s /usr/lib/jvm/temurin-11-jdk /usr/lib/jvm/jre-11-openjdk`
 - Intune is probably unistalled at this point even if you did in-place update from 41 because of the dependencies so install again with `sudo dnf install intune-portal`
