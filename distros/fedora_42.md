@@ -1,8 +1,8 @@
 # Fedora 42
 
-## Fedora 42 used dnf5 package manager
+## Fedora 42 uses dnf5 package manager
 
-Command for adding repository from a repo file:
+Command for adding repository from a repo file for dnf5:
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
