@@ -6,7 +6,7 @@ Command for adding repository from a repo file for dnf5:
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo dnf5 config-manager add-repo --from-repofile=https://packages.microsoft.com/yumrepos/microsoft-rhel9.0-prod/config.repo
+sudo dnf5 config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/microsoft-rhel9.0-prod/config.repo
 ```
 
 ## Openjdk 11 dependency
