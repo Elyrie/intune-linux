@@ -1,6 +1,6 @@
 # Restart Intune when memory limit is reached
 
-`sudodit /etc/systemd/system/microsoft-identity-device-broker.service.d/override.conf`
+`sudoedit /etc/systemd/system/microsoft-identity-device-broker.service.d/override.conf`
 
 ```
 [Service]
