@@ -2,10 +2,10 @@
 
 ## Run commands to restart services
 
-sudo systemctl status microsoft-identity-device-broker
-sudo systemctl restart microsoft-identity-device-broker
-systemctl --user status microsoft-identity-broker
-systemctl --user restart microsoft-identity-broker
+sudo systemctl status microsoft-identity-device-broker  
+sudo systemctl restart microsoft-identity-device-broker  
+systemctl --user status microsoft-identity-broker  
+systemctl --user restart microsoft-identity-broker  
 
 ## Check output
 
