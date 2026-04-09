@@ -10,8 +10,6 @@ systemctl --user stop microsoft-identity-broker
 
 sudo systemctl clean --what=configuration --what=runtime --what=state microsoft-identity-device-broker
 
-systemctl --user clean --what=state --what=configuration --what=runtime microsoft-identity-broker
-
 rm -r ~/.config/intune
 
 ## Uninstall the Intune package
@@ -20,7 +18,7 @@ sudo apt purge intune-portal
 
 ## Uninstall any versions of Edge that are installed
 
-sudo apt purge microsoft-edge-dev
+sudo apt purge microsoft-edge-stable
 
 ## Optional, but this can potentially free space by some larger dependencies that the auth broker required
 
